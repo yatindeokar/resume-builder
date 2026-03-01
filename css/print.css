@@ -1,0 +1,54 @@
+/* Print */
+@page {
+  size: A4;
+  margin: 0.8cm 0 0.5cm 0;
+}
+@page :first {
+  margin-top: 0;
+}
+@media print {
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  header, .form-wrapper, .steps, .hero, #template-section,
+  .download-btn, .output-header, .crop-overlay { display: none !important; }
+  .container { padding: 0 !important; max-width: none !important; }
+  #resume-output { display: block !important; margin: 0 !important; }
+  #resume-paper { box-shadow: none !important; margin: 0 !important; border-radius: 0 !important; max-width: none !important; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .out-modern { flex-direction: column; }
+  .out-modern .o-sidebar { width: 100%; }
+  .out-creative .o-body { flex-direction: column; }
+  .out-creative .o-right { width: 100%; }
+  .out-minimal .o-exp-item, .out-minimal .o-edu-item { flex-direction: column; gap: 0.2rem; }
+  .out-minimal { padding: 2rem; }
+  .out-classic { padding: 2rem; }
+  .out-compact .o-cols { flex-direction: column; }
+  .out-compact .o-right { width: 100%; min-width: unset; }
+  .out-compact .o-header { flex-direction: column; }
+  .out-compact .o-contact-col { text-align: left; margin-top: 0.4rem; }
+  .out-executive .o-top, .out-executive .o-body { padding: 1.5rem; }
+  .out-elegant { padding: 2rem; }
+  .out-tech { padding: 1.5rem; }
+  .out-timeline { padding: 2rem 2rem 2rem 2.5rem; }
+  .out-professional { flex-direction: column; }
+  .out-professional .o-sidebar { width: 100%; min-width: unset; }
+  .out-corporate .o-cols { flex-direction: column; }
+  .out-corporate .o-sidebar { width: 100%; min-width: unset; }
+  .out-polished .o-top { flex-direction: column; }
+  .out-polished .o-photo-rect { margin-left: 0; margin-top: 1rem; }
+  .out-polished .o-mid { flex-direction: column; }
+  .out-polished .o-mid-right { width: 100%; min-width: unset; }
+  .out-polished .o-body { padding: 0 1.5rem 2rem; }
+  .out-bold .o-row { flex-direction: column; gap: 0.3rem; }
+  .out-bold .o-row-label { width: auto; min-width: unset; }
+  .out-bold .o-hdr, .out-bold .o-contact-bar, .out-bold .o-body { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
